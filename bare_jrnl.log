@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.20)  21 AUG 2017 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.20)  21 AUG 2017 18:33
 entering extended mode
-**E:/Paper/InverseRegression/submitted/bare_jrnl.tex
-(E:/Paper/InverseRegression/submitted/bare_jrnl.tex
+**E:/Paper/InverseRegression/InverseRegression/bare_jrnl.tex
+(E:/Paper/InverseRegression/InverseRegression/bare_jrnl.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 (IEEEtran.cls
@@ -343,12 +343,12 @@ Missing character: There is no ™ in font ptmr7t!
 ) [5] (bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
  3503 strings out of 493334
- 51532 string characters out of 3140975
+ 51556 string characters out of 3140975
  125023 words of memory out of 3000000
  6972 multiletter control sequences out of 15000+200000
  47022 words of font info for 96 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 40i,8n,26p,1681b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,8n,26p,1689b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program files/MiKTeX/fonts/enc/dvips/fontname/8r.enc
 }<D:/Program files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program
  files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Program files/MiKTeX
@@ -365,7 +365,7 @@ gram files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program fi
 les/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program files/MiKTeX/fonts/type
 1/urw/times/utmbi8a.pfb><D:/Program files/MiKTeX/fonts/type1/urw/times/utmr8a.p
 fb><D:/Program files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (5 pages, 391096 bytes).
+Output written on bare_jrnl.pdf (5 pages, 391104 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
