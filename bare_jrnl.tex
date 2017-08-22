@@ -271,7 +271,7 @@ The simulation setup is illustrated in Fig.~\ref{fig1:room}(a). The room size is
 \label{fig1:room}
 \end{figure}
 
-For the DNN model, there are 3 hidden layers each with 1024 nodes. One every two samples in the dataset is used for training. Half of the left is used for development and the other half for testing. Early stopping is applied to avoid overfitting when the development set error no longer decreases after a patience of 5 epoches. The method of PPAM~\cite{deleforge2015acoustic} (source code provided therein) is investigated and the parameter $K$ is chosen from $\{$64, 128, 256$\}$ to achieve the best performance. It is worth to note again that PPAM was not proposed for the task here. Linear interpolation is also considered, but in a simplified way:
+For the DNN model, 3 hidden layers each with 1024 nodes are used throughout based on heuristic search. One every two samples in the dataset is used for training. Half of the left is used for development and the other half for testing. Early stopping is applied to avoid overfitting when the development set error no longer decreases after a patience of 5 epoches. The method of PPAM~\cite{deleforge2015acoustic} (source code provided therein) is investigated and the parameter $K$ is chosen from $\{$64, 128, 256$\}$ to achieve the best performance. It is worth to note again that PPAM was not proposed for the task here. Linear interpolation is also considered, but in a simplified way:
 \begin{equation}\label{eq:li}
   \widehat{\mathcal{Y}}_n(f)=[\mathcal{Y}_{n,1}(f)+\mathcal{Y}_{n,2}(f)]/2
 \end{equation}
