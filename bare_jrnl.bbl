@@ -36,11 +36,12 @@ Y.~Lin, J.~Chen, Y.~Kim, and D.~D. Lee, ``Blind channel identification for
   speech dereverberation using l1-norm sparse learning.'' in \emph{NIPS}, 2007,
   pp. 921--928.
 
-\bibitem{dele2013variational}
-A.~Deleforge, F.~Forbes, and R.~Horaud, ``Variational {EM} for binaural
-  sound-source separation and localization,'' in \emph{IEEE International
-  Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em
-  plus 0.5em minus 0.4em\relax IEEE, 2013, pp. 76--80.
+\bibitem{li2015estimation}
+X.~Li, L.~Girin, R.~Horaud, and S.~Gannot, ``Estimation of relative transfer
+  function in the presence of stationary noise based on segmental power
+  spectral density matrix subtraction,'' in \emph{IEEE International Conference
+  onAcoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2015, pp. 320--324.
 
 \bibitem{koldovsky2015spatial}
 Z.~Koldovsk{\'y}, J.~M{\'a}lek, and S.~Gannot, ``Spatial source subtraction
@@ -58,6 +59,12 @@ R.~Talmon, I.~Cohen, and S.~Gannot, ``Relative transfer function identification
   using convolutive transfer function approximation,'' \emph{IEEE Transactions
   on audio, speech, and language processing}, vol.~17, no.~4, pp. 546--555,
   2009.
+
+\bibitem{taseska2015relative}
+M.~Taseska and E.~A. Habets, ``Relative transfer function estimation exploiting
+  instantaneous signals and the signal subspace,'' in \emph{23rd European
+  Signal Processing Conference (EUSIPCO)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2015, pp. 404--408.
 
 \bibitem{talmon2013relative}
 R.~Talmon and S.~Gannot, ``Relative transfer function identification on
