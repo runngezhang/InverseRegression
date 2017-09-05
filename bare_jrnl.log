@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.20)  24 AUG 2017 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.20)  5 SEP 2017 13:48
 entering extended mode
 **E:/Paper/InverseRegression/InverseRegression/bare_jrnl.tex
 (E:/Paper/InverseRegression/InverseRegression/bare_jrnl.tex
@@ -302,12 +302,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 172.
+LaTeX Font Info:    Try loading font information for U+msa on input line 174.
 
 ("D:\Program files\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 172.
+LaTeX Font Info:    Try loading font information for U+msb on input line 174.
 
 ("D:\Program files\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -318,20 +318,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <fig1_room.pdf, id=23, 604.87682pt x 356.96895pt>
 File: fig1_room.pdf Graphic file (type pdf)
  <use fig1_room.pdf>
-Package pdftex.def Info: fig1_room.pdf used on input line 269.
+Package pdftex.def Info: fig1_room.pdf used on input line 271.
 (pdftex.def)             Requested size: 224.27985pt x 132.35422pt.
 
 <fig2_emb.pdf, id=24, 1186.11136pt x 525.60231pt>
 File: fig2_emb.pdf Graphic file (type pdf)
  <use fig2_emb.pdf>
-Package pdftex.def Info: fig2_emb.pdf used on input line 302.
+Package pdftex.def Info: fig2_emb.pdf used on input line 304.
 (pdftex.def)             Requested size: 236.88062pt x 104.96622pt.
  [3 <./fig1_room.pdf>] <fig3_error_along_freq.pdf, id=36, 556.08252pt x 432.567
 06pt>
 File: fig3_error_along_freq.pdf Graphic file (type pdf)
 
 <use fig3_error_along_freq.pdf>
-Package pdftex.def Info: fig3_error_along_freq.pdf used on input line 333.
+Package pdftex.def Info: fig3_error_along_freq.pdf used on input line 335.
 (pdftex.def)             Requested size: 239.39923pt x 186.22462pt.
  [4 <./fig2_emb.pdf> <./fig3_error_along_freq.pdf>] (bare_jrnl.bbl
 Missing character: There is no â in font ptmr7t!
@@ -342,13 +342,13 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 ) [5] (bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 3504 strings out of 493334
- 51574 string characters out of 3140975
- 125027 words of memory out of 3000000
+ 3501 strings out of 493334
+ 51543 string characters out of 3140975
+ 123023 words of memory out of 3000000
  6973 multiletter control sequences out of 15000+200000
  47022 words of font info for 96 fonts, out of 3000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 40i,8n,26p,1689b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1141 hyphenation exceptions out of 8191
+ 40i,8n,26p,1636b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program files/MiKTeX/fonts/enc/dvips/fontname/8r.enc
 }<D:/Program files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program
  files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Program files/MiKTeX
@@ -365,9 +365,9 @@ gram files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program fi
 les/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program files/MiKTeX/fonts/type
 1/urw/times/utmbi8a.pfb><D:/Program files/MiKTeX/fonts/type1/urw/times/utmr8a.p
 fb><D:/Program files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (5 pages, 391481 bytes).
+Output written on bare_jrnl.pdf (5 pages, 427556 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

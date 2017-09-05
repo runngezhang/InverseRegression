@@ -91,7 +91,7 @@
 
 
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
+%\hyphenation{op-tical net-works semi-conduc-tor}
 
 
 \begin{document}
@@ -154,18 +154,20 @@ relative transfer function, inverse regression, deep neural network, manifold le
 %Q1: how do we model the RTF samples? Manifold learning
 %Q2: how do we obtain RTF in un-sampled areas? interpolation
 
-\IEEEPARstart{T}{he} acoustic properties of a room environment can be fully characterized by the collection of the Acoustic Impulse Responses (AIRs). An AIR relates two arbitrary poses inside the room: one for the source and the other for the receiver. In the microphone array setup, where the receiver includes multiple microphones, the Relative Transfer Function (RTF)~\cite{gannot2001signal} is more often used. The estimation of the RTF is essential in many applications, such as sound field reproduction~\cite{betlehem2005theory}, dereverberation~\cite{lin2007blind}, source localization~\cite{li2015estimation} and source separation~\cite{koldovsky2015spatial}. Over the years, the RTF estimation is based merely on the measured signals~\cite{cohen2004relative,talmon2009relative,taseska2015relative}, while the prior knowledge of the RTF could provide additional performance benefits~\cite{talmon2013relative} but remain less studied.
+\IEEEPARstart{T}{he} acoustic properties of a room environment can be fully characterized by the collection of the Acoustic Impulse Responses (AIRs). An AIR relates two arbitrary poses inside the room: one for the source and the other for the receiver. In the multichannel setup, where the receiver includes multiple microphones, the Relative Transfer Function (RTF)~\cite{gannot2001signal} is more often used. The estimation of the RTF is essential in many applications, such as sound field reproduction~\cite{betlehem2005theory}, dereverberation~\cite{lin2007blind}, source localization~\cite{li2015estimation} and source separation~\cite{koldovsky2015spatial}. Over the years, the RTF estimation is based merely on the measured signals~\cite{cohen2004relative,talmon2009relative,taseska2015relative}. While the prior knowledge of the RTF given the source-receiver pose could provide additional performance benefits~\cite{talmon2013relative}, it remains less studied.
 
-The RTF involves two AIRs, the knowledge of which usually relies on explicit physical models. For instance, the classical image-source method~\cite{allen1979image} is widely used for simulating small room acoustics. The method assumes the response to be contributed by multiple virtual image sources, and the simulation requires the size and geometry of the room and the wall reflection coefficients. If these parameters can be estimated in practice, an approximation of the AIR can be obtained accordingly~\cite{asaei2012computational,asaei2014structured}. The AIRs can be alternatively parameterized based on a modal expansion of 3D basis functions, considering only a predefined spatial area~\cite{samarasinghe2015efficient}. Moreover, in stationary rooms, the AIR examples measured in advance can be utilized. Compressed sensing with sparsity was introduced to interpolate AIR for the early parts~\cite{mignot2013room} or in the low frequency bins~\cite{mignot2014low}, based on a limited number of measurements. Whenever dense sampling was achievable, linear interpolation turned out to be a simple but effective approach~\cite{nishino1999interpolating,vincent2013second}.
+The RTF involves two AIRs, the knowledge of which usually relies on explicit physical models. For instance, the classical image-source method~\cite{allen1979image} is widely used for simulating small room acoustics. The method assumes the response to be contributed by multiple virtual image sources, and the simulation requires the room to be rectangular and the wall reflection coefficients known. If the room geometry can be estimated in practice, an approximation of the AIR can be obtained accordingly~\cite{asaei2012computational,asaei2014structured}. Considering a predefined pose space only, the AIRs can be alternatively parameterized based on the harmonic solution to the wave equation~\cite{samarasinghe2015efficient}. Moreover, in stationary rooms, AIR measurements can be collected in advance and help the modeling. With a limited number of measurements, compressed sensing with sparsity is introduced to interpolate AIR for the early parts~\cite{mignot2013room} or in the low frequency bins~\cite{mignot2014low}. When dense sampling is achievable, the simple data-based linear interpolation turns out to be an effective approach~\cite{nishino1999interpolating,vincent2013second}.
 
 %The manifold features one-to-one mapping, yes. MR only keeps the geodesic distance, like linear interpolation
 % and local linearity, no really. only PPAM assumes this! DNN implicitly learns the manifold
 
-In some scenarios, e.g., in conference rooms or cars, the stationary assumption is reasonable since the layout does not often change over time. The source-receiver poses now work as the only varying degree of freedom in the system and the AIRs are indeed confined to a low-dimensional manifold in this case. Associating the manifold with the source poses has been realized in many source localization tasks. The manifold learning paradigm was first introduced to parameterize linear systems and was successful in retrieving the controlling parameters of AIRs~\cite{talmon2012parametrization}. It was then adopted to RTF modeling~\cite{laufer2013relative,laufer2015study} and was applied in supervised~\cite{talmon2011supervised} and semi-supervised source localization~\cite{laufer2016mr,laufer2016semi}. The RTF encodes the Interchannel Level Difference (ILD) in decibels and the Interchannel Phase Difference (IPD) in radians. The low-dimensional structure of the ILD and IPD was reveled in a binaural setup~\cite{deleforge20122d}. Based on a local linearity assumption on the manifold, the method of Probabilistic Piecewise Affine Mapping (PPAM) was proposed for a 2D sound localization task. Specially, PPAM learned a bijective mapping between the poses and the ILD and IPD, whereas only the interaural-to-pose regression was discussed for localization. The bijective mapping has also been generalized to the cases of multiple sources~\cite{deleforge2015acoustic}, co-localization of audio sources in images~\cite{deleforge2015co} and partially latent response variables~\cite{deleforge2015high}.
+In some common scenarios, e.g., in conference rooms or cars, the stationary assumption made above is reasonable since the layout does not often change over time. Indeed, the AIRs in this case are confined to a low-dimensional manifold because the source-receiver pose now works as the only varying degree of freedom. This geometrical property was revealed by the manifold learning paradigm~\cite{talmon2012parametrization} that was first introduced to parameterize linear systems. It was then adopted to RTF modeling~\cite{laufer2013relative,laufer2015study} and applied in supervised~\cite{talmon2011supervised} and semi-supervised source localization tasks~\cite{laufer2016mr,laufer2016semi}, which was to associate the manifold with the source poses. The RTF encodes the Interchannel Level Difference (ILD) in decibels and the Interchannel Phase Difference (IPD) in radians. The low-dimensional structure of the ILD and IPD was shown in a binaural setup~\cite{deleforge20122d}. Based on a local linearity assumption on the manifold, the method of Probabilistic Piecewise Affine Mapping (PPAM) was proposed for a 2D sound localization task. Specially, PPAM learned a bijective mapping between the poses and the ILD and IPD, whereas only the interaural-to-pose regression was discussed for localization. The bijective mapping has also been generalized to the cases of multiple sources~\cite{deleforge2015acoustic}, co-localization of audio sources in images~\cite{deleforge2015co} and partially latent response variables~\cite{deleforge2015high}.
 
-In this letter, we raise the problem of RTF inverse regression, which is defined as approximating the high-dimensional responses from their low-dimensional representations. The question is: what knowledge can we have of the RTF given the source-receiver pose? As deriving an explicit physical model could not always be possible but representative data examples of the acoustic environment can be collected in advance, the problem is addressed from a pure data-driven perspective. A Deep Neural Network (DNN) model is proposed to directly generate the frequency domain RTF vector given the source-receiver pose. The DNN model is advantageous in that it learns a globally nonlinear mapping from the data examples while preserving a local linearity, which matches the manifold structure implicitly. In the experiments, the acoustic space is sampled uniformly and the DNN model is tested in unseen poses in terms of an absolute error measure. Note that the evaluation of the generated RTFs in specific applications is not in the scope here.
+In this letter, we raise the problem of RTF inverse regression, which is defined as approximating the high-dimensional responses from their low-dimensional representations. The question is: how to acquire prior knowledge of the RTF given the source-receiver pose? As deriving an explicit physical model could not always be possible but representative examples of the acoustic environment can be collected in advance, especially with modern smart devices, the problem is addressed from a pure data-driven perspective. A Deep Neural Network (DNN) model is proposed to directly generate the frequency domain RTF vector given the source-receiver pose. The DNN model is advantageous in that it learns a globally nonlinear mapping from the data examples while preserving a local linearity, which matches the manifold structure implicitly. In the experiments, the acoustic space is sampled uniformly and the DNN model is tested in unseen poses. The evaluation is based on an absolute prediction error measure, while applying the generated RTFs to specific applications is not in the scope here.
 
 The rest of this letter is organized as follows. The relevant definitions are given in Section II. The RTF inverse regression task and the possible solutions including the supervised DNN model are explained in Section III. The experimental setups and results are presented in Section IV and conclusions are drawn in Section V.
+
+%\newpage
 
 \section{Definitions}
 
@@ -196,9 +198,9 @@ where $j$ is the complex unit, $||\cdot||_2$ denotes the Euclidian norm and $c$ 
 
 \section{RTF inverse regression}
 
-The task of RTF inverse regression is to learn the mapping function $g:\mathbb{R}^{L}\rightarrow \mathbb{R}^{D}$ from a given set of labeled examples $\{\mathcal{X}:\Theta_s,\Theta_r; \mathcal{Y}:H(f)\}$, while no physical model is involved.
+The task of RTF inverse regression is to learn the mapping function $g$ from a given set of pairwise examples $\{\mathcal{X}:\Theta_s,\Theta_r;~\mathcal{Y}:H(f)\}$, while no physical constraint is involved. Three possible solutions are discussed in the following.
 
-Linear interpolation is the intuitive way, provided that $\mathcal{X},\mathcal{Y}$ have the same geometric structure in their separate space. The response of a new pose $\widehat{\mathcal{X}}$ can then be estimated as
+Linear interpolation is the intuitive way. Provided that $\mathcal{X},\mathcal{Y}$ have the same geometric structure in their separate space, the response of a new pose $\widehat{\mathcal{X}}$ can be estimated as
 \begin{equation}\label{eq:linearinter}
   \widehat{\mathcal{Y}}=\frac{1}{\sum \alpha_i}\sum_{i=1}^{I}\alpha_i \mathcal{Y}_i
 \end{equation}
@@ -214,7 +216,7 @@ DNNs feature multiple hidden layers trained through error backpropagation. Theor
 \begin{equation}\label{eq:dnn}
   \mathcal{Y}={\bf W}^{(1)}\zeta({\bf W}^{(0)}\mathcal{X}+{\bf b}^{(0)})+{\bf b}^{(1)}
 \end{equation}
-where ${\bf W}^{(i)}, {\bf b}^{(i)}$ are the $i$th layer parameters and $\zeta(\cdot)$ is a nonlinear activation function. The design of the DNN model for RTF inverse regression is explained in the following.
+where ${\bf W}^{(i)}, {\bf b}^{(i)}$ are the $i$th layer parameters and $\zeta(\cdot)$ is a nonlinear activation function. More details about the proposed DNN model are given as below.
 
 
 \subsection{Inputs and targets}
@@ -357,7 +359,7 @@ Considering the usage of white noise source signals in the RTF measurement proce
 
 \section{Conclusion}
 
-The prior knowledge of the RTFs is favorable in many applications but it is less studied before. In this letter, we raised the RTF inverse regression problem and addressed it from a pure data-driven perspective. A DNN model was trained to directly generate the high-dimensional acoustic responses given their low-dimensional pose representations. The DNN model implicitly captured the RTF manifold and performed better than the free field model and better than linear interpolation in large distances. The superior performance of linear interpolation in small distances also supported the local linearity property of the RTFs on the manifold.
+The prior knowledge of the RTFs is favorable in many applications but it is less studied before. In this letter, we raised the RTF inverse regression problem and addressed it in the simplified stationary environments. A DNN model was trained to directly generate the high-dimensional acoustic responses given their low-dimensional pose representations. The DNN model implicitly captured the RTF manifold and performed better than the free field model and better than linear interpolation in large distances. The superior performance of linear interpolation in small distances also supported the local linearity property of the RTFs on the manifold.
 
 % Note that the IEEE does not put floats in the very first column
 % - or typically anywhere on the first page for that matter. Also,
@@ -404,7 +406,7 @@ The authors would like to thank Antoine Deleforge and Sharon Gannot for their he
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
 % the document is modified later
-%\IEEEtriggeratref{13}
+\IEEEtriggeratref{15}
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
