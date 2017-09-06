@@ -128,7 +128,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-In room acoustic environments, the Relative Transfer Functions (RTFs) are controlled by few underlying modes of variability. Accordingly, they are confined to a low-dimensional manifold. In this letter, we investigate a RTF inverse regression problem, the task of which is to generate the high-dimensional responses from their low-dimensional representations. The problem is addressed from a pure data-driven perspective and a supervised Deep Neural Network (DNN) model is applied to learn a mapping from the source-receiver \emph{poses} (positions and orientations) to the frequency domain RTF vectors. The experiments demonstrate the difficulty of this task: the model provides better prior knowledge of the RTF than the free field assumption, however, it fails to compete with the linear interpolation technique in small distances.
+In room acoustic environments, the Relative Transfer Functions (RTFs) are controlled by few underlying modes of variability. Accordingly, they are confined to a low-dimensional manifold. In this letter, we investigate a RTF inverse regression problem, the task of which is to generate the high-dimensional responses from their low-dimensional representations. The problem is addressed from a pure data-driven perspective and a supervised Deep Neural Network (DNN) model is applied to learn a mapping from the source-receiver \emph{poses} (positions and orientations) to the frequency domain RTF vectors. The experiments show promising results: the model achieves lower prediction error of the RTF than the free field assumption. However, it fails to compete with the linear interpolation technique in small sampling distances.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -356,6 +356,7 @@ Considering the usage of white noise source signals in the RTF measurement proce
 \end{center}
 \end{table}
 
+% Conducting experiments on the Beamforming task could make more sense. Use the generated RTF and the direct sound for steering vector.
 
 \section{Conclusion}
 
